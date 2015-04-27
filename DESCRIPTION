@@ -1,0 +1,14 @@
+Package: SoilMoisturePattern
+Version: 1.0
+Date: 2015-04-27
+Title: Analyse Soil Moiture Pattern
+Author: Johannes Brenner <Johannes.Brenner@eurac.com>
+Maintainer: Johannes Brenner <Johannes.Brenner@eurac.com>
+Description: Anayse Soil Moisture Pattern
+Depends: R (>= 3.2.0)
+License: LGPL (>= 2)
+LazyData: Yes
+LazyLoad: Yes
+Imports:
+    zoo,
+    chron
