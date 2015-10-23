@@ -8,13 +8,18 @@
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-smp_MAPvSMC(x)
+smp_MAPvSMC(map, smc_data, smc_x_deg, smc_y_deg, plot_name, NAval = NULL,
+            crs = "+proj=utm +zone=32 +datum=WGS84 +units=m +no_defs +ellps=WGS84 +towgs84=0,0,0")
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{x}{
-%%     ~~Describe \code{x} here~~
-}
+  \item{map}{raster map, e.g. NDVI, slope, ...}
+  \item{smc_data}{numeric vector containing volumetric soil moisture data}
+  \item{smc_x_deg}{numeric vector containing longitude coordinates in m}
+  \item{smc_y_deg}{numeric vector containing latitude coordinates in m}
+  \item{plot_name}{plot main}
+  \item{NAval}{NA value in map}
+  \item{crs}{coordinate system for \pkg{rgdal} project function}
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
@@ -42,14 +47,7 @@ smp_MAPvSMC(x)
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
 
-## The function is currently defined as
-function (x) 
-{
-  }
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
