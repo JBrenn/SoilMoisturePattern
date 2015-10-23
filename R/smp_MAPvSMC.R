@@ -1,14 +1,14 @@
 # # 
-library(raster)
-library(rgdal)
+#library(raster)
+#library(rgdal)
 # 
 # # ndvi map
 # ndvi_2015_06 <- "/run/user/1000/gvfs/smb-share:server=abz01fst.eurac.edu,share=users/Common/Interdisciplinary_projects/HiResAlp/01_data/Drone_Field_Work/NDVI_Matsch_2015_06_10/Data/20150610_it-mat_3rd_NDVI_index_ndvi.tif"
 # # thermal map
-therm_2015_10 <- "/run/user/1000/gvfs/smb-share:server=abz01fst.eurac.edu,share=users/Common/Interdisciplinary_projects/HiResAlp/01_data/Drone_Field_Work/Campaign_2015_10_12/test_flir_transparent_mosaic_group1.tif"
+# therm_2015_10 <- "/run/user/1000/gvfs/smb-share:server=abz01fst.eurac.edu,share=users/Common/Interdisciplinary_projects/HiResAlp/01_data/Drone_Field_Work/Campaign_2015_10_12/test_flir_transparent_mosaic_group1.tif"
 # 
 # #elevation
-dem <- "/run/user/1000/gvfs/smb-share:server=abz01fst.eurac.edu,share=users/Common/Interdisciplinary_projects/HiResAlp/01_data/Drone_Field_Work/Campaign_2015_06_10/Qgis/dem_2_5m/dem_2_5m"
+# dem <- "/run/user/1000/gvfs/smb-share:server=abz01fst.eurac.edu,share=users/Common/Interdisciplinary_projects/HiResAlp/01_data/Drone_Field_Work/Campaign_2015_06_10/Qgis/dem_2_5m/dem_2_5m"
 # #slope map
 # slp  <- "/run/user/1000/gvfs/smb-share:server=abz01fst.eurac.edu,share=users/Common/Interdisciplinary_projects/HiResAlp/01_data/Drone_Field_Work/Campaign_2015_06_10/Qgis/montacini_slope2_5m.tif"
 # #aspect map

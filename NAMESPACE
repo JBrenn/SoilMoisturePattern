@@ -3,6 +3,8 @@
 
 import(zoo)
 import(chron)
+import(rgdal)
+import(raster)
 
 # Export all names
 exportPattern(".")

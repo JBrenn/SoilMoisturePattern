@@ -11,4 +11,6 @@ LazyData: Yes
 LazyLoad: Yes
 Imports:
     zoo,
-    chron
+    chron,
+    rgdal,
+    raster
