@@ -2,10 +2,10 @@
 \alias{smp_MAPvSMC}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+Soil Moisture vs. raster map variable
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Plot of linear regression Soil Moisture Content vs. Raster Map variable
 }
 \usage{
 smp_MAPvSMC(map, smc_data, smc_x_deg, smc_y_deg, plot_name, NAval = NULL,
