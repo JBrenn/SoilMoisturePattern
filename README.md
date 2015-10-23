@@ -1,8 +1,8 @@
 
 =======
 # SoilMoisturePattern
-R Package for analyssing Soil osture Pattern
-* Mean relative difference computing
+R Package for analysing Soil Moisture Pattern
+* Mean relative difference
 
 # How to start
 

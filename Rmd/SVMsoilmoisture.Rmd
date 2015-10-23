@@ -1,0 +1,25 @@
+---
+title: "Machine Learning for Soil Moisture Prediction / Estimation"
+author: "Johannes Brenner"
+date: "16. Oktober 2015"
+output: html_document
+---
+
+Joseph Rickert inspired me to learn using the Support Vector Machine (SVM) method by his post on the [Revolutions blog](http://blog.revolutionanalytics.com/2015/10/the-5th-tribe-support-vector-machines-and-caret.html). He cites [A Practical Guide to Support Vector Classification](https://www.csie.ntu.edu.tw/~cjlin/papers/guide/guide.pdf) of Hsu et al. who suggest a simple methodology to follow for newbys in SVM:
+
+1. Transform data to the format of a SVM package
+2. Conduct simple scaling on the data
+3. Consider the RBF kernel $K(x, y) = exp (−γ||x−y||^{2})$
+4. Use cross-validation to find the best parameter C and γ
+5. Use the best parameter C and γ to train the whole training set
+6. Test
+
+```{r, TrainingTestSegmentation, echo = TRUE, eval=FALSE}
+library(caret)
+library(dplyr)        
+library(kernlab)     # support vector machine 
+#library(pROC)	       # plot the ROC curves
+
+
+```
+

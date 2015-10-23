@@ -40,6 +40,18 @@ Johannes Brenner, \email{Johannes.Brenner@eurac.edu}
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
+#load SMC data B2 station
+
+  data(B2_VolSoilMoisture)
+
+#MRD analysis with sensors best sensors in 5 cm, timeframe: from "2010-05-01"
+
+  mrd_data <- window(B2_VolSoilMoisture[,c(4,5,6,7,9)],
+                      start = as.chron(as.Date("2010-05-01")), 
+                      end =  tail(time(B2_VolSoilMoisture),1))
+  mrd_data_naApprox <- na.approx(object = mrd_data)
+
+  ( mrd <- MRD(data = mrd_data_naApprox) )
 
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
