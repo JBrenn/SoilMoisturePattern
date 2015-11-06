@@ -82,8 +82,8 @@ The data set is a basis for better understanding  of inter-dependencies between 
     \item{\code{AktuelleNutzung}}{Factor, current Land Use label}
     \item{\code{VegTypCL}}{integer, Vegetation type class}
     \item{\code{VegLab3}}{Factor, Vegetation Type Label 3; very specific e.g. "Goldhaferwiese"}
-    \item{\code{VegLab2}}{Factor, Vegetation Type Label 3; e.g. "Sekundaere Rasengesellschaften"}
-    \item{\code{VegLab1}}{Factor, Vegetation Type Label 3; general e.g. "FETTWEIDEN UND FETTRASEN"}
+    \item{\code{VegLab2}}{Factor, Vegetation Type Label 2; e.g. "Sekundaere Rasengesellschaften"}
+    \item{\code{VegLab1}}{Factor, Vegetation Type Label 1; general e.g. "FETTWEIDEN UND FETTRASEN"}
     \item{\code{TrittID}}{integer, Damage by treads (cattle, sheep, ...) class }
     \item{\code{Trittschaeden}}{Factor, Damage by treads label}
     \item{\code{VegShapeID}}{numeric, ID of shapes in vegetation map; useful for extracting additional information}
