@@ -7,7 +7,7 @@ HiResAlp Mobile Field Campaign
 \description{
 Data frame containing field data gathered manually within the HiResAlp project 2013-2015. Data on volumetric soil moisture content are combined with topographic, vegetation and land use characteristics. 
 %Climatic driver are presented by preceding rainfall amounts 1-7 days before the field campaigns. 
-The data set is a basis for better understanding  of inter-dependencies between soil moisture, topography and atmosperic conditions/weather and to investigate soil moisture variablility and stability in time and space.  The campaigns aim to validate remote sensing products coming from satellites (e.g. RADARSAT2 or Sentinel images), accomplish high resolution NDVI and thermal maps (VAR products) and, moreover, can be useful for calibrating hydrological models.
+The data set is a basis for better understanding  of inter-dependencies between soil moisture, topography and atmosperic conditions/weather and to investigate soil moisture variablility and stability in time and space.  The campaigns aim to validate remote sensing products coming from satellites (e.g. RADARSAT2 or Sentinel images), accomplish high resolution NDVI and thermal maps (drone products) and, moreover, can be useful for calibrating hydrological models.
 }
 \usage{data("HiResAlp_MobileCampaigns")}
 \format{
@@ -45,7 +45,7 @@ The data set is a basis for better understanding  of inter-dependencies between 
     \item{\code{SoilTemperature_sd}}{Soil Temperature Standard Deviation}
     \item{\code{Permittivity_mean}}{Soil Permittivity (Eb) Mean Value in mS/m; measure variable by sensor, used to derive SMC}
     \item{\code{Permittivity_sd}}{Soil Permittivity Standard Deviation}
-        \item{\code{SoilMoisture_mean_Processed}}{numeric, Volumetric Soil Moisture Mean Value (processed data); for "WET-2 Sensor, Delta-T" SMC is calculated by the formula SMC = f(Eb) estimated from the "HydroSense II, Campbell" data | TO INCLUDE}
+    \item{\code{SoilMoisture_mean_Processed}}{numeric, Volumetric Soil Moisture Mean Value (processed data); for "WET-2 Sensor, Delta-T" SMC is calculated by the formula SMC = (sqrt(Eb) - a0) / a1, where the parameters a0 and a1 are soil specific paramters and have been estimated from the "HydroSense II, Campbell" data}
         
 
 \bold{\emph{Measurement location meta data}}
