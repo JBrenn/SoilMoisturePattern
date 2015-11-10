@@ -11,7 +11,7 @@ The data set is a basis for better understanding  of inter-dependencies between 
 }
 \usage{data("HiResAlp_MobileCampaigns")}
 \format{
-  A data frame with 2344 observations on the following 49 variables.
+  A data frame with 2344 observations on the following 54 variables.
   \describe{
     \item{\code{ID}}{integer, ID of observation}
     
@@ -99,12 +99,18 @@ The data set is a basis for better understanding  of inter-dependencies between 
     \item{\code{soilID}}{numeric, Soil class}
     
     
-\bold{\emph{Information on atmospheric condition / weather (base stations B2 and P2) | TO INCLUDE}}  
+\bold{\emph{Information on atmospheric condition / weather}}
+\bold{\emph{(base stations P2 - 1500 m a.s.l and B3 - 2000 m a.s.l.)}}
 
-    \item{\code{precedingRain1}}{Rainfall Amount in mm 24 hours before measurement}
-    \item{\code{precedingRain3}}{Rainfall Amount in mm 3 days before measurement}
-    \item{\code{precedingRain5}}{Rainfall Amount in mm 5 days before measurement}
-    \item{\code{precedingRain10}}{Rainfall Amount in mm 10 days before measurement}
+    \item{\code{precedingRain1_B3}}{Rainfall Amount in mm 24 hours before measurement, station B3}
+    \item{\code{precedingRain3_B3}}{Rainfall Amount in mm 3 days before measurement, station B3}
+    \item{\code{precedingRain5_B3}}{Rainfall Amount in mm 5 days before measurement, station B3}
+    \item{\code{precedingRain10_B3}}{Rainfall Amount in mm 10 days before measurement, station B3}
+    
+    \item{\code{precedingRain1_P2}}{Rainfall Amount in mm 24 hours before measurement, station P2}
+    \item{\code{precedingRain3_P2}}{Rainfall Amount in mm 3 days before measurement, station P2}
+    \item{\code{precedingRain5_P2}}{Rainfall Amount in mm 5 days before measurement, station P2}
+    \item{\code{precedingRain10_P2}}{Rainfall Amount in mm 10 days before measurement, station P2}
 }
 }
 \details{
