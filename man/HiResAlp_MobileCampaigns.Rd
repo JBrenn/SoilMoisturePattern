@@ -102,9 +102,13 @@ The data set is a basis for better understanding  of inter-dependencies between 
 \bold{\emph{Information on atmospheric condition / weather}}
 \bold{\emph{(base stations P2 - 1500 m a.s.l and B3 - 2000 m a.s.l.)}}
 
+    \item{\code{Temp}}{Air Temperature in degC, mean value for day of observation}
+    \item{\code{RH}}{Relative Humidity in %, mean value for day of observation}
+    \item{\code{SolarRadiation}}{Incoming Solar Radiation in W/m2, mean value for day of observation}
+ 
     \item{\code{precedingRain1_B3}}{Rainfall Amount in mm 24 hours before measurement, station B3}
     \item{\code{precedingRain3_B3}}{Rainfall Amount in mm 3 days before measurement, station B3}
-    \item{\code{precedingRain5_B3}}{Rainfall Amount in mm 5 days before measurement, station B3}
+    \item{\code{precedingRain5_B3}}{Rainfall Amount  in mm 5 days before measurement, station B3}
     \item{\code{precedingRain10_B3}}{Rainfall Amount in mm 10 days before measurement, station B3}
     
     \item{\code{precedingRain1_P2}}{Rainfall Amount in mm 24 hours before measurement, station P2}
