@@ -5,15 +5,17 @@
 HiResAlp Mobile Field Campaign 
 }
 \description{
-Data frame containing field data gathered manually within the HiResAlp project 2013-2015. Data on volumetric soil moisture content are combined with topographic, vegetation and land use characteristics. 
+Data frame containing field data gathered manually within the HiResAlp project 2013-2015. Data on volumetric soil moisture content are combined with topographic, vegetation and land use characteristics derived from different sources. Climatic drivers (preceding precipitation, air temperature, relative humidity, and incoming solar radiation) are measured in representative locations within the LTER site Matsch/Mazia. Land use and soil classifications were gained during intensive field investigations. Remote sensing products, like MODIS vegetation indices, accomplish the data set.
 %Climatic driver are presented by preceding rainfall amounts 1-7 days before the field campaigns. 
-The data set is a basis for better understanding  of inter-dependencies between soil moisture, topography and atmosperic conditions/weather and to investigate soil moisture variablility and stability in time and space.  The campaigns aim to validate remote sensing products coming from satellites (e.g. RADARSAT2 or Sentinel images), accomplish high resolution NDVI and thermal maps (drone products) and, moreover, can be useful for calibrating hydrological models.
+The data set is a basis for better understanding of inter-dependencies between soil moisture, topography and atmosperic conditions/weather, land use and soil variability. It serves to investigate soil moisture variablility and stability in time and space. The campaigns aim to validate remote sensing products coming from satellites (e.g. RADARSAT2 or Sentinel images), accomplish high resolution NDVI and thermal maps (drone products) and, moreover, can be useful for calibrating hydrological models or data assimilation approaches (e.g. combining ground sensed data, EO observations and modeling).
+
 }
 \usage{data("HiResAlp_MobileCampaigns")}
 \format{
-  A data frame with 2344 observations on the following 54 variables.
+  A data frame with 2443 observations on the following 58 variables.
   \describe{
     \item{\code{ID}}{integer, ID of observation}
+    \item{\code{CampaignType}}{Faktor, Topology of HiResAlp campaign, RADAR for campaigns considered for EO data calibration/validation (in MUNTATSCHINIG or MATSCH valley, in both regions if not indicated), DRONE for campaigns to accomplish drone field campaign}
     
     
 \bold{\emph{Datetime variables}}        
@@ -50,9 +52,9 @@ The data set is a basis for better understanding  of inter-dependencies between 
 
 \bold{\emph{Measurement location meta data}}
         
-    \item{\code{Landuse}}{integer, Land Use Class derived from field campaign; Classes: 1-irr. Meadow; 2- non irr. Meadow; 3- addandoned Meadow; 4- Pasture; 5- Other; 6- Other: Shrubs; 7- Other: Forest}
-    \item{\code{SoilCoverage}}{integer, Soil Coverage Class derived from field campaign; Classes: 1- Bare, 2- 0.25, 3- 0.50; 4- 0.75; 5- 1}
-    \item{\code{VegetationHeight}}{integer, Vegetation Height Class dervived from field campaign; Classes: 1- >10 2- 10<x<25; 3- 25<x<50; 4- 50<x<75; 5- >75}
+    \item{\code{Landuse}}{Factor, Land Use Class derived from field campaign; Classes: 1-irr. Meadow; 2- non irr. Meadow; 3- addandoned Meadow; 4- Pasture; 5- Other; 6- Other: Shrubs; 7- Other: Forest; missing values were filled with Information derived from former vegetation survey in Matsch/Mazia valley - see below.}
+    \item{\code{SoilCoverage}}{Factor, Soil Coverage Class derived from field campaign [percent]; Classes: 1- Bare Soil, 2- 0.25, 3- 0.50; 4- 0.75; 5- 1}
+    \item{\code{VegetationHeight}}{Factor, Vegetation Height Class dervived from field campaign [cm]; Classes: 1- >10cm 2- [10cm;25cm]; 3- [25cm;50cm]; 4- [50cm;75cm]; 5- >75cm}
     \item{\code{Notes}}{character, Note taken during field campaign}
     
 
@@ -63,7 +65,6 @@ The data set is a basis for better understanding  of inter-dependencies between 
     \item{\code{aspect}}{numeric, Aspectin degree derived from DEM (resolution: 2.5m)}
     \item{\code{curvProfile}}{numeric, profile Curvature derived from DEM (resolution: 2.5m)}
     \item{\code{curvHorizon}}{numeric, horizon Curvature derived from DEM (resolution: 2.5m)}
-    \item{\code{Notes}}{character, Note taken during field campaign}
     \item{\code{elevation}}{numeric, Elevation in m a.s.l. from DEM (resolution: 2.5m)}
     \item{\code{slope}}{numeric, Slope in degree derived from DEM (resolution: 2.5m)}
     \item{\code{aspect}}{numeric, Aspectin degree derived from DEM (resolution: 2.5m)}
@@ -97,7 +98,9 @@ The data set is a basis for better understanding  of inter-dependencies between 
 \bold{\emph{Information derived from soil survey in Matsch/Mazia valley in 2011}}
 
     \item{\code{soilID}}{numeric, Soil class}
-    
+    \item{\code{soilID}}{Factor, Soil type}
+    \item{\code{soilID}}{Factor, Texture class}
+    \item{\code{soilID}}{Factor, Soil type in GEOtop model}
     
 \bold{\emph{Information on atmospheric condition / weather}}
 \bold{\emph{(base stations P2 - 1500 m a.s.l and B3 - 2000 m a.s.l.)}}
@@ -106,25 +109,40 @@ The data set is a basis for better understanding  of inter-dependencies between 
     \item{\code{RH}}{Relative Humidity in percent, mean value for day of observation}
     \item{\code{SolarRadiation}}{Incoming Solar Radiation in W/m2, mean value for day of observation}
  
-    \item{\code{precedingRain1_B3}}{Rainfall Amount in mm, 24 hours before measurement, station B3}
-    \item{\code{precedingRain3_B3}}{Rainfall Amount in mm, 3 days before measurement, station B3}
-    \item{\code{precedingRain5_B3}}{Rainfall Amount  in mm, 5 days before measurement, station B3}
-    \item{\code{precedingRain10_B3}}{Rainfall Amount in mm, 10 days before measurement, station B3}
+    \item{\code{antecedentRain1_B3}}{Rainfall Amount in mm, 24 hours before measurement, station B3}
+    \item{\code{antecedentRain3_B3}}{Rainfall Amount in mm, 3 days before measurement, station B3}
+    \item{\code{antecedentRain5_B3}}{Rainfall Amount  in mm, 5 days before measurement, station B3}
+    \item{\code{antecedentRain10_B3}}{Rainfall Amount in mm, 10 days before measurement, station B3}
+    \item{\code{antecedentRain10_B3}}{Rainfall Amount in mm, 40 days before measurement, station B3}
     
-    \item{\code{precedingRain1_P2}}{Rainfall Amount in mm, 24 hours before measurement, station P2}
-    \item{\code{precedingRain3_P2}}{Rainfall Amount in mm, 3 days before measurement, station P2}
-    \item{\code{precedingRain5_P2}}{Rainfall Amount in mm, 5 days before measurement, station P2}
-    \item{\code{precedingRain10_P2}}{Rainfall Amount in mm, 10 days before measurement, station P2}
+    \item{\code{antecedentRain1_P2}}{Rainfall Amount in mm, 24 hours before measurement, station P2}
+    \item{\code{antecedentRain3_P2}}{Rainfall Amount in mm, 3 days before measurement, station P2}
+    \item{\code{antecedentRain5_P2}}{Rainfall Amount in mm, 5 days before measurement, station P2}
+    \item{\code{antecedentRain10_P2}}{Rainfall Amount in mm, 10 days before measurement, station P2}
+    \item{\code{antecedentRain10_P2}}{Rainfall Amount in mm, 40 days before measurement, station P2} 
+
+\bold{\emph{Remote Sensing Data (e.g. MODIS, RADARSAT)}}
+
+    \item{\code{radarsat_smc}}{RADARSAT soil moisture product}
+    \item{\code{MODIS.start.date}}{Date of first MODIS product retrieved}
+    \item{\code{MODIS.end.date}}{Date of last MODIS product retrieved}
+    \item{\code{MODIS.NDVI.mean}}{numeric, MODIS Normalized Diverence  (NDVI) mean values, EO map resolution 250m, [0;1]}
+    \item{\code{MODIS_EVI}}{numeric, MODIS EVI mean value, extension of NDVI, EO map resolution 250m, [0;1]}
 }
 }
 \details{
-%%  ~~ If necessary, more details than the __description__ above ~~
+MODIS data are point wise extracted using the functionalities of \pkg{MODIStools}. In specific the functions  \code{\link{MODISSubsets}} and \code{\link{MODISsummary}} were used for a time period of 14 days araound the observation day. Data sources see below.
 }
 \source{
-%%  ~~ reference to a publication or URL from which the data were ined ~~
+MODIS Vegetation Index Products (NDVI and EVI): 
+MOD13Q1 (16-Day L3 Global 250m) \url{https://lpdaac.usgs.gov/dataset_discovery/modis/modis_products_table/mod13q1} 
+
+MODIS Evapotranspiration (ET and LE): MOD16A2 (8-day Global 1km) \url{ftp://ftp.ntsg.umt.edu/pub/MODIS/NTSG_Products/MOD16/}
 }
 \references{
-Qin et al. (2011): \emph{'An approach to computing topographic wetness index based on maximum downslope gradient'}, Precision Agriculture, 12(1), 32-43.
+Qin et al. (2011): \emph{An approach to computing topographic wetness index based on maximum downslope gradient.}, Precision Agriculture, 12(1), 32-43. \url{http://doi.org/10.1007/s11119-009-9152-y}
+
+Tuck et al. (2014). \emph{MODISTools - downloading and processing MODIS remotely sensed data in R.} Ecology and Evolution, 4(24), 4658–4668. \url{http://doi.org/10.1002/ece3.1273}
 }
 \examples{
 data(HiResAlp_MobileCampaigns)
